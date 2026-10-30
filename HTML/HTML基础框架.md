@@ -1,5 +1,4 @@
-html的基础框架为:
-
+300ms点击延迟
 
 ```html
 <meta name="viewport" content="user-scalable=no">
