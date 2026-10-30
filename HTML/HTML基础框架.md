@@ -252,6 +252,34 @@ caption标签:可以为表格添加清单
 </div>
 ```
 <img width="843" height="157" alt="image" src="https://github.com/user-attachments/assets/53085975-3905-4413-a5b7-c52e80d3c993" />
+<br>
+<hr>
+<br>
+<h3>在网页中嵌入另外的页面</h3>
+
+```HTML
+<body>
+    <iframe src="https://www.bilibili.com/" width="100%" height="100%"></iframe> 
+</body>
+```
+网页的嵌入代码<br>
+<img width="726" height="424" alt="image" src="https://github.com/user-attachments/assets/2259231b-4b4a-4b73-8e6e-54f22a455d0b" />
+
+```HTML
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1706416465&bvid=BV1UT42167xb&cid=1641702404&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+```
+<br>
+<hr>
+<br>
+<h3>其他标签</h3>
+header:定义页面或部分的头部，通常包含标题和导航。<br>
+nav:定义导航链授的部分。<br>
+article:表示独立的内容块，通常是可以独立分发的文章。<br>
+section>:定义文档中的区域或章节，用于组织内容。<br>
+aside:表示与主内容相关的附加信息，通常用于侧边栏。<br>
+footer:定义页面或部分的底部，通常包含版权信息和联系信息。<br>
+
+
 
 
 
