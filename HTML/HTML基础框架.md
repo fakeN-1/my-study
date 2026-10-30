@@ -100,7 +100,7 @@ div和span用于结构化和样式化内容(划分区域)<br>
 <br>
 <hr>
 <br>
-<h3>图片标签</h3>
+<h3>图片标签img</h3>
 src属性:填写图片的路径<br>
 alt属性:在图片无法加载的时候出现的文本<br>
 title属性:用于在鼠标停留的时候,展示图片的描述
@@ -118,14 +118,151 @@ title属性:用于在鼠标停留的时候,展示图片的描述
 <br>
 <hr>
 <br>
-<h3>链接标签</h3>
-可以实现页面的跳转<br>
+<h3>链接标签a</h3>
+a标签的href属性:可以实现页面的跳转<br>
+target属性:默认_selif正常打开,_blank可以另外打开一个窗口
 
-<img width="265" height="52" alt="image" src="https://github.com/user-attachments/assets/449901b6-f75d-4ade-b9c3-a1607a675b0b" />
+
 
 ```html
-    <div>给你康一个好康的<a href="https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=518611c018aea9be639c19407f18f2c4">视频</a></div>
+    <div>
+        給你康一個好康的
+        <a href="https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=518611c018aea9be639c19407f18f2c4" 
+        target="_blank">
+        視頻</a>
+    </div>
 ```
+
+<img width="843" height="66" alt="image" src="https://github.com/user-attachments/assets/b6111ef2-677a-4af8-a914-27d5e4e1ff34" />
+<br>
+a标签的href属性:同时也可以跳转到本网页对应的界面(#＋标签名),锚点链接
+
+```html
+<body>
+    <div>
+        <a href="#div1">第一個
+        <a href="#div2">第二個
+        <a href="#div3">第三個
+    </div>
+   <div id="div1">
+        給你康一個好康的
+        <a href="https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=518611c018aea9be639c19407f18f2c4" 
+        target="_blank">
+        視頻</a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="div2">
+        康第二個好康的
+        <a href="https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=518611c018aea9be639c19407f18f2c4" 
+        target="_blank">
+        視頻</a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="div3">
+        康第三個好康的
+        <a href="https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click&vd_source=518611c018aea9be639c19407f18f2c4" 
+        target="_blank">
+        視頻</a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+```
+
+<h3>视频标签video</h3>
+video标签:<br>
+controls属性:增加控制(开始暂停)<br>
+autoplay属性:自动播放<br>
+loop属性:循环播放<br>
+muted属性:静音播放<br>
+poster属性:展示视频的封面<br>
+track标签用于添加字幕
+
+```html
+<body>
+    <video width="720" height="540" controls autoplay loop>
+        <source src="..\【4K珍藏】诈骗神曲《Never Gonna Give You Up》！愿者上钩！.mp4">
+    </video>
+</body>
+```
+
+<br>
+<hr>
+<br>
+<h3>列表</h3>
+ol标签:有序列表<br>
+tape属性:可以选择排列的方式<br>
+
+```THML
+<div>
+    <h4>下面属于前端语言的是:</h4>
+    <ol type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+</div>
+```
+<br>
+ul标签:无序列表
+type属性: disc实心圆(默认) circle空心圆心
+
+```HTMl
+<div>
+    <h4>下面属于前端语言的是:</h4>
+    <ul type="circle">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</div>
+```
+<br>
+<hr>
+<br>
+<h3>表格table</h3>
+table标签: table <br>
+内部的tr标签为行,th表示表头的单元格<br>
+caption标签:可以为表格添加清单
+
+```HTML
+<div>
+    <table>
+         <caption>前端基础框架</caption>
+        <tr>
+            <th>HTML</th>
+            <td>CSS</td>
+            <td>JavaScript</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>♥</td>
+            <td>🐕</td>
+            <td>🐱</td>
+        </tr>
+    </table>
+</div>
+```
+<img width="843" height="157" alt="image" src="https://github.com/user-attachments/assets/53085975-3905-4413-a5b7-c52e80d3c993" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
