@@ -278,6 +278,181 @@ article:表示独立的内容块，通常是可以独立分发的文章。<br>
 section>:定义文档中的区域或章节，用于组织内容。<br>
 aside:表示与主内容相关的附加信息，通常用于侧边栏。<br>
 footer:定义页面或部分的底部，通常包含版权信息和联系信息。<br>
+<h3>最后用一个代码总结html的基础框架</h3>
+
+```HTML
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 HTML 学习总结</title>
+</head>
+
+<body>
+    <!-- header：网页顶部，通常放标题和导航 -->
+    <header>
+        <h1>我的 HTML 学习总结</h1>
+        <p>这是我今天学习 HTML 后制作的第一个小网页。</p>
+
+        <!-- nav：网页导航；点击链接会跳转到对应 id 的区域 -->
+        <nav>
+            <a href="#basic">基础标签</a> |
+            <a href="#media">图片和视频</a> |
+            <a href="#list">列表</a> |
+            <a href="#table">学习计划</a> |
+            <a href="#about">关于我</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- main：页面的主要内容 -->
+    <main>
+        <!-- section：把相关内容组织成一个区域 -->
+        <section id="basic">
+            <h2>一、HTML 基础标签</h2>
+
+            <p>
+                HTML 使用<strong>标签</strong>组织网页内容。
+                一个标签可以包含文字，也可以包含其他标签。
+            </p>
+
+            <h3>文本格式</h3>
+            <p>
+                这是普通文字，
+                <b>这是粗体</b>，
+                <i>这是斜体</i>，
+                <s>这是删除线</s>，
+                <u>这是下划线</u>。
+            </p>
+
+            <p>
+                行内标签可以放在段落中，例如用
+                <span>span 标记一小段内容</span>。
+            </p>
+
+            <h3>div 区域示例</h3>
+            <!-- div 常用于把一组相关内容放在一起 -->
+            <div>
+                <p>这段内容放在一个 div 区域中。</p>
+                <p>div 本身不会自动显示边框。</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="media">
+            <h2>二、图片和视频</h2>
+
+            <h3>图片</h3>
+            <!-- src 是图片地址；alt 是图片无法显示时的替代文字 -->
+            <img
+                src="https://placehold.co/640x240?text=HTML+Learning"
+                alt="HTML 学习主题占位图片"
+                title="我的 HTML 学习页面"
+                width="640"
+            >
+
+            <h3>链接</h3>
+            <p>
+                点击下面的链接访问
+                <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML"
+                   target="_blank">
+                    MDN 的 HTML 文档
+                </a>。
+                target="_blank" 表示在新标签页打开。
+            </p>
+
+            <h3>视频</h3>
+            <p>把视频文件放到这个 HTML 文件旁边，并将文件名改成 my-video.mp4，就可以尝试播放：</p>
+
+            <!-- 将 my-video.mp4 替换成你自己的视频文件名 -->
+            <video width="480" controls muted loop>
+                <source src="my-video.mp4" type="video/mp4">
+                你的浏览器不支持 video 标签。
+            </video>
+
+            <!--
+            自动播放常会被浏览器拦截。
+            若要测试自动播放，可尝试在 video 上增加 autoplay muted。
+            -->
+        </section>
+
+        <hr>
+
+        <section id="list">
+            <h2>三、列表</h2>
+
+            <h3>我今天学到的标签</h3>
+            <!-- ul 是无序列表，每一项使用 li -->
+            <ul>
+                <li>标题：h1 到 h6</li>
+                <li>段落：p</li>
+                <li>链接：a</li>
+                <li>图片：img</li>
+            </ul>
+
+            <h3>制作网页的步骤</h3>
+            <!-- ol 是有序列表 -->
+            <ol>
+                <li>创建 HTML 文件</li>
+                <li>编写页面结构</li>
+                <li>用浏览器打开页面</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="table">
+            <h2>四、我的学习计划</h2>
+
+            <!-- table 表示表格；tr 是行，th 是表头单元格，td 是普通单元格 -->
+            <table>
+                <caption>前端学习安排</caption>
+                <tr>
+                    <th>学习内容</th>
+                    <th>学习状态</th>
+                    <th>备注</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>正在学习</td>
+                    <td>今天完成基础标签总结</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>准备学习</td>
+                    <td>之后学习网页样式</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>准备学习</td>
+                    <td>之后学习网页交互</td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <article id="about">
+            <h2>五、关于这篇总结</h2>
+            <p>
+                这是一篇独立的学习记录。我会继续整理每天学到的知识，
+                并尝试把知识点做成可以直接打开的小网页。
+            </p>
+            <p><a href="#top">返回页面顶部</a></p>
+        </article>
+    </main>
+
+    <!-- footer：网页底部，通常放作者或版权信息 -->
+    <footer>
+        <hr>
+        <p>我的 HTML 学习笔记</p>
+    </footer>
+</body>
+</html>
+```
 
 
 
