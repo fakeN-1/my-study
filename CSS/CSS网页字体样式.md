@@ -30,7 +30,7 @@ div>p:nth-child(3){
 }
 
 ```
-<img width="843" height="449" alt="image" src="https://github.com/user-attachments/assets/d76312f7-365b-4dc5-a0ca-a836669e1164" /
+<img width="843" height="449" alt="image" src="https://github.com/user-attachments/assets/d76312f7-365b-4dc5-a0ca-a836669e1164" />
 <br>
 <hr>
 font-weight属性:字重<br>
