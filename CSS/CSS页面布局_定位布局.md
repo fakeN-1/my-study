@@ -54,6 +54,69 @@ position: static;
 <br>
 <h3>包含块</h3><br>
 浏览器计算某些元素的尺寸和位置时，作为参照的区域。
+<br>静态和相对定位(static/relative)
+<br>绝对定位(absolute)
+<br>固定定位(fixed)
+<br>
+<hr>
+<br>
+<h3>Z轴顺序:z-index</h3>
+z 轴顺序决定元素在屏幕上谁盖在谁上面<br>
+
+```
+.box-a{
+  left: 50px;
+  top: 50px;
+  z-index: 1;
+  background-color: red;
+}
+.box-b{
+  left: 80px;
+  top: 80px;
+  z-index: 2;
+  background-color: green;
+}
+```
+A的index为1,B的index为2,则B在A 的上方<br>
+<img width="843" height="240" alt="image" src="https://github.com/user-attachments/assets/fa844768-f323-4f55-b95c-b9ab09d8f082" />
+<br>
+<hr>
+<br>
+<h3>层叠上下文</h3>
+浏览器把一组元素当成一个整体，决定它们前后覆盖顺序的规则。<br>
+
+```
+<div class="folder-a" >
+  <div class="popup">绿色区域</div>
+</div>
+<div class="folder-b" >黑色区域</div>
+```
+
+```
+.folder-a {
+  position: relative;
+  z-index: 1; /* 建立层叠上下文，整个 A 文件夹层级是 1 */
+}
+
+.popup {
+  position: absolute;
+  z-index: 9999; /* 只在 A 文件夹内部比较 */
+  background-color: #23e633;
+}
+
+.folder-b {
+  position: relative;
+  z-index: 2; /* B 文件夹整体比 A 高 */
+  background-color: #000000;
+}
+```
+z-index 不是全页面的统一排名.。不同上下文之间，浏览器先比较它们所在上下文的层级；内部数值不会越级参与外部比较。
+
+<img width="843" height="108" alt="image" src="https://github.com/user-attachments/assets/2c142ca6-0760-4165-beae-a72b613b2c71" />
+
+
+
+
 
 
 
