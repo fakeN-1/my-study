@@ -1,0 +1,104 @@
+<h3>变量</h3>
+简单来说,变量就是用来储存这些信息的。<br>
+一个简单的变量命名并且输出:
+
+```
+let message;
+
+message = 'Hello';
+```
+我们可以使用 var、let 或 const 声明变量来存储数据。
+
+<br>let — 现代的变量声明方式。
+<br>var — 老旧的变量声明方式。一般情况下，我们不会再使用它。但是，我们会在 老旧的 "var" 章节介绍 var 和 let 的微妙差别，以防你需要它们。
+<br>const — 类似于 let，但是变量的值无法被修改。
+<br>
+<h3>交互:alert、prompt 和 confirm</h3>
+<h3>alert</h3>
+
+```
+alert("Hello")
+```
+<h3>prompt</h3>
+
+```
+result = prompt(title, [default]);
+```
+浏览器会显示一个带有文本消息的模态窗口，还有 input 框和确定/取消按钮。<br>
+title
+显示给用户的文本<br>
+default
+可选的第二个参数，指定 input 框的初始值。
+
+```
+let age = prompt('How old are you?', 100);
+
+alert(`You are ${age} years old!`); 
+```
+<img width="442" height="183" alt="image" src="https://github.com/user-attachments/assets/72df6d68-1ab4-4353-a85f-8e81ac0f239d" />
+<img width="453" height="143" alt="image" src="https://github.com/user-attachments/assets/44e14dd6-f395-43a6-8113-2620978770bf" />
+
+<h3>confirm</h3>
+confirm 函数显示一个带有确定和取消两个按钮的模态窗口。
+
+```
+let isBoss = confirm("Are you the boss?");
+
+alert( isBoss ); // 如果“确定”按钮被按下，则显示 true
+```
+<img width="456" height="156" alt="image" src="https://github.com/user-attachments/assets/e699bd04-4bd3-4faa-82b6-542ee9511d34" />
+<img width="457" height="142" alt="image" src="https://github.com/user-attachments/assets/b8b439a1-9fcf-43ff-91b8-320e95424278" />
+
+<h3>练习</h3>
+创建一个简单的页面<br>
+创建一个要求用户输入 name，并通过浏览器窗口对键入的内容进行输出的 web 页面。
+<br>
+
+```
+prompt("请输入你的名字", "小李");
+alert("欢迎" + prompt("请输入你的名字", "小李"));
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
