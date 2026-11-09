@@ -33,6 +33,11 @@ if __name__=="__main__":
         # val=False,这段是选择是否验证
     )
 ```
+### 训练后的文件
+- 训练后的文件一般保存在runs/....文件中,脚本中的name为子文件的命名.
+- 训练后输出一些训练效果的文件,以及一个best.pt的训练模型.
+><img width="1065" height="547" alt="image" src="https://github.com/user-attachments/assets/412905d3-f505-4d41-8d5e-2a03f791d9ec" />
+
 
 
 
