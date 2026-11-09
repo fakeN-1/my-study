@@ -57,13 +57,13 @@ if __name__=="__main__":
 > <img width="710" height="442" alt="image" src="https://github.com/user-attachments/assets/3098cecf-688b-4708-a2bc-1c3b065daa3b" />
 ---
 <img width="1040" height="420" alt="image" src="https://github.com/user-attachments/assets/4cd46a11-880d-4be4-8745-a0e76d6fe6dc" />
->这是属于yolo格式的标签,有这样格式的标签才能够训练图片.
+> 这是属于yolo格式的标签,有这样格式的标签才能够训练图片.
 ### 如何制作标签文件
 - 最简单的方法就是使用**labelimg**人工标注
 - 以下就是一些重点的部分:
 > <img width="1106" height="107" alt="image" src="https://github.com/user-attachments/assets/64928450-451d-4a42-b8af-5863df18be20" />
->这两行代码分别代表,切换为labelimg环境
-> 打开labelimg,并且告诉文件的位置**输入依次为:images txt labels的位置**
+- 这两行代码分别代表,切换为labelimg环境
+- 打开labelimg,并且告诉文件的位置**输入依次为:images txt labels的位置**
 
 
 
