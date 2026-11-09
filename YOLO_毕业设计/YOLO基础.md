@@ -58,12 +58,37 @@ if __name__=="__main__":
 ---
 <img width="1040" height="420" alt="image" src="https://github.com/user-attachments/assets/4cd46a11-880d-4be4-8745-a0e76d6fe6dc" />
 > 这是属于yolo格式的标签,有这样格式的标签才能够训练图片.
+
 ### 如何制作标签文件
 - 最简单的方法就是使用**labelimg**人工标注
 - 以下就是一些重点的部分:
 > <img width="1106" height="107" alt="image" src="https://github.com/user-attachments/assets/64928450-451d-4a42-b8af-5863df18be20" />
 - 这两行代码分别代表,切换为labelimg环境
 - 打开labelimg,并且告诉文件的位置**输入依次为:images txt labels的位置**
+> <img width="1044" height="476" alt="image" src="https://github.com/user-attachments/assets/961a99d1-c783-4b3c-ae67-c5e7150d840a" />
+
+## 模型的使用
+>最后训练好的模型该如何使用呢
+```python
+from sympy import true
+
+from ultralytics import YOLO
+
+model=YOLO(r"D:\yolo_v8.3\runs\detect\yolo_11n2\weights\best.pt")
+model.predict(
+    source=r"C:\Users\fakeN\Downloads\哈士奇和金毛mp4.mp4",
+    save=True,
+    show=False,
+    save_txt=True,
+    # save=false show=True可以直接查看预算结果
+)
+# 输入文件的地址用于预测图片/视频
+```
+-使用这个脚本,粘贴训练好的pt文件的位置,并且在source输入想要验证的图片/视频位置.
+
+
+
+
 
 
 
