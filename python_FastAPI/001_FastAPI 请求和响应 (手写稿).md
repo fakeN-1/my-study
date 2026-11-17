@@ -66,9 +66,10 @@ async def get_name(name: str=Path(...,min_length=1,max_length=20,description="�
 > 以上就是限制的名字的字数, 其中:...表示必须填写. description表示的是注解.
 ---
 ### 查询参数
+- 对大量的数据进行处理.
 - 当声名的参数不是路径参数的时候,会自动把参数解释为查询参数
 - 查询参数可以给形参的赋值
-> 这个参数会出现的URL的?之后.
+> 这个参数会出现的URL的?之后.格式为:参数名=参数值
 ```python
 # 查询参数,查询新闻 skip:记录跳过的数量.limit:返回的记录数值,固定值10
 @ app.get("/news_list")
@@ -78,17 +79,38 @@ async def get_news_list(skip:int,limit : int=10):
 ><img width="1226" height="1045" alt="image" src="https://github.com/user-attachments/assets/3fdd88c1-f183-4bf3-be46-a82c56d1fae8" />
 
 - 查询参数在URL的位置是:http://127.0.0.1:8000/news_list?skip=12&limit=10
-> 在❓之后
+> 在❓之后,格式为参数名=参数值
 *** 查询参数的复杂注解 Query ***
 > 这个函数和之前的Path的参数写法十分相似.
 ```python
-skip:int=Query(...,gt=0,lt=100,description="跳过的记录数"),
+        skip:int=Query(...,gt=0,lt=100,description="跳过的记录数"),
+        limit : int=Query(10,description="返回的记录数")):
 ```
-
-
-
-
-
+<img width="609" height="301" alt="image" src="https://github.com/user-attachments/assets/1fafd06c-857c-4f9f-b5d8-52ad5ae66619" />
+### 请求体参数
+- 请求体参数位于HTTP的消息体中(更加安全)
+请求体的定义:
+- class User(baseModel)
+``` python
+from pydantic import BaseModel
+class User(BaseModel):
+    username:str
+    password:str
+@app.get("/register")
+async def register(user:User):
+    return user
+```
+><img width="954" height="383" alt="image" src="https://github.com/user-attachments/assets/9d11352e-fce2-4dea-bf84-bc74a10736a1" />
+*** 请求体参数的复杂注解:Field ***
+> 先引用Field: from pydantic import Field
+```python
+    username:str=Field(default="张三",min_length=1,max_length=20,description="这里填写用户名")
+    password:str= Field(default="密码",min_length=5,max_length=12,description="这里填写密码")
+```
+- 请求体参数
+1.作用: 创建更新资源
+2.创建: 使用BaseModel
+3.注解: 使用Field
 
 
 
