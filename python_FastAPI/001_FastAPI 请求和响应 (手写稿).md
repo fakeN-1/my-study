@@ -87,6 +87,7 @@ async def get_news_list(skip:int,limit : int=10):
         limit : int=Query(10,description="返回的记录数")):
 ```
 <img width="609" height="301" alt="image" src="https://github.com/user-attachments/assets/1fafd06c-857c-4f9f-b5d8-52ad5ae66619" />
+
 ### 请求体参数
 - 请求体参数位于HTTP的消息体中(更加安全)
 请求体的定义:
@@ -101,13 +102,14 @@ async def register(user:User):
     return user
 ```
 ><img width="954" height="383" alt="image" src="https://github.com/user-attachments/assets/9d11352e-fce2-4dea-bf84-bc74a10736a1" />
-*** 请求体参数的复杂注解:Field ***
+
+***  请求体参数的复杂注解:Field  ***
 > 先引用Field: from pydantic import Field
 ```python
     username:str=Field(default="张三",min_length=1,max_length=20,description="这里填写用户名")
     password:str= Field(default="密码",min_length=5,max_length=12,description="这里填写密码")
 ```
-- 请求体参数
+-  请求体参数
 1.作用: 创建更新资源
 2.创建: 使用BaseModel
 3.注解: 使用Field
