@@ -291,17 +291,3 @@ Base.metadata.create_all(engine)
 **MySQL 负责管理和存储数据，SQL 是操作数据库的语言，SQLAlchemy 让 Python
 能够方便地通过 SQL 或 ORM 操作数据库。**
 
-## 十、下一步学习计划
-
--   [ ] 熟悉 SQL 的 `CREATE`、`INSERT`、`SELECT`、`UPDATE`、`DELETE`。
--   [ ] 学习 SQLAlchemy 的 `Base`、模型类和 `mapped_column()`。
--   [ ] 学习 `Session`，理解数据库会话。
--   [ ] 使用 ORM 完成增删改查（CRUD）。
--   [ ] 学习主键、外键以及一对多、多对多关系。
--   [ ] 将 SQLAlchemy 与 FastAPI 的依赖注入结合起来。
-
-------------------------------------------------------------------------
-
-**本次实践成果：** 已在本地创建 `my_project` 数据库，并在 PyCharm 中通过
-SQLAlchemy 连接 MySQL；执行 `SELECT DATABASE()` 后成功输出
-`my_project`。
