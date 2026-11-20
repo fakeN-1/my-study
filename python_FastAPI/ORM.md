@@ -9,6 +9,7 @@
 1.创建数据库引擎:
 > create_async_engine
 from sqlalchemy.ext.asyncio import 
-
+2.定义模型类
+> 
 
 
