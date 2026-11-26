@@ -13,7 +13,7 @@ async def root():
     return {"message": "Hello World"}
 ```
 - 这样的代码一般会被保存在main.py文件夹中,那么使用以下代码就可以启动Fsatapi.
-> vicorn app.main:app --reload
+> uvicorn app.main:app --reload
 - 网页的输出结果为:
 ><img width="345" height="110" alt="image" src="https://github.com/user-attachments/assets/336343b1-cb97-42ee-b249-062308d48da0" />
 
